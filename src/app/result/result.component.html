@@ -1,0 +1,142 @@
+<div class="main" id="main" #main *ngIf="data?.Register_No">
+    <div class="header">
+        <div class="logos">
+            <img src="../../assets/hauna.png" alt="" width="130">
+            <img src="../../assets/mferd.png" alt="" width="90">
+        </div>
+        <br>
+        <h3>HAUNA TEACHERS TRAINING COURSE</h3>
+        <h3>Statement of Results</h3>
+        <br>
+    </div>
+    <div class="subheader">
+        <table id="result2">
+            <tr>
+                <th>
+                    Register Number:
+                </th>
+                <td><b>{{data?.Register_No}}</b></td>
+            </tr>
+            <tr>
+                <th>
+                    Name:
+                </th>
+                <td><b>{{data?.Name}}</b></td>
+            </tr>
+            <tr>
+                <th>
+                    Cluster:
+                </th>
+                <td><b>{{data?.Cluster}}</b></td>
+            </tr>
+            <tr>
+                <th>
+                    School:
+                </th>
+                <td><b>{{data?.School ? data?.School:'-'}}</b></td>
+            </tr>
+            <tr>
+                <th>
+                    Year:
+                </th>
+                <td><b>2022-23</b></td>
+            </tr>
+        </table>
+        <br />
+        <br />
+    </div>
+    <div class="content">
+        <table id="result">
+            <tr>
+                <th> SL.No</th>
+                <th> Description </th>
+                <th> Max. Marks</th>
+                <th> Marks Scored </th>
+            </tr>
+            <tr *ngIf="data?.Demonstrating_understanding_of_the_Hauna_vision_and_mission">
+                <td>1 </td>
+                <td>Demonstrating understanding of the Hauna vision and mission.</td>
+                <td>5</td>
+                <td>{{data?.Demonstrating_understanding_of_the_Hauna_vision_and_mission}}</td>
+            </tr>
+            <tr *ngIf="data?.Demonstrating_knowledge_of_child_and_child_development">
+                <td>2</td>
+                <td>Demonstrating knowledge of child and child development.</td>
+                <td>10</td>
+                <td>{{data?.Demonstrating_knowledge_of_child_and_child_development}}</td>
+            </tr>
+            <tr *ngIf="data?.Demonstrating_knowledge_of_child_developmental_domains">
+                <td>3 </td>
+                <td>Demonstrating knowledge of child developmental domains.</td>
+                <td>25</td>
+                <td>{{data?.Demonstrating_knowledge_of_child_developmental_domains}}</td>
+            </tr>
+            <tr *ngIf="data?.Demonstrating_knowledge_of_pedagogical_practices_at_Hauna">
+                <td>4 </td>
+                <td>Demonstrating knowledge of pedagogical practices at Hauna.</td>
+                <td>15</td>
+                <td>{{data?.Demonstrating_knowledge_of_pedagogical_practices_at_Hauna}}</td>
+            </tr>
+            <tr *ngIf="data?.Demonstrating_knowledge_of_student_assessments">
+                <td>5 </td>
+                <td>Demonstrating knowledge of student assessments.</td>
+                <td>15</td>
+                <td>{{data?.Demonstrating_knowledge_of_student_assessments}}</td>
+            </tr>
+            <tr *ngIf="data?.Group_Presentation">
+                <td>6 </td>
+                <td>Group Presentation</td>
+                <td>20</td>
+                <td>{{data?.Group_Presentation}}</td>
+            </tr>
+            <tr *ngIf="data?.Attendance">
+                <td>7 </td>
+                <td>Attendance</td>
+                <td>10</td>
+                <td>{{data?.Attendance}}</td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <table id="result">
+            <tr>
+                <th>Total Marks Secured</th>
+                <td><b>{{data?.Total}}</b></td>
+            </tr>
+            <tr>
+                <th>Total Percentage Secured</th>
+                <td><b>{{data?.Total_Percentage }}%</b></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div class="footer">
+        <span class="quote">Congratulations!!<br>
+            <!-- <span style="color:green" class="quote">You are moving towards progress.<br>
+                It's just the beginning!</span><br>
+            <span style="color:red" class="quote">Overconfidence & Contentment will STOP YOU!<br>
+                Stay away from it!</span> -->
+
+        </span>
+        <!-- <span *ngIf="data?.RESULT !== 'PASS'" class="quote" style="color:red">
+            Failure is not a permanent experience, <br>
+            you must rise above it and choose to
+            be better than you were a moment ago. <br>
+            Changing and growing is what makes you WIN!<br>
+            <span style="color:green" class="quote">If you put in the right TIME + EFFORT You will see the RESULTS!<br>
+                All the Best!</span></span> -->
+        <div style="display: flex;width:100%;justify-content: center">
+            <img src="../../assets/growon.png" alt="" width="60">
+        </div>
+        <br>
+        <a href="growon.app">www.growOn.app</a>
+    </div>
+
+</div>
+<br />
+<div class="print">
+    <button mat-flat-button color="primary" printSectionId="main" ngxPrint [useExistingCss]="true">Print</button>
+    <button mat-flat-button color="primary" (click)="certificate(data?.Name)">Certificate</button>
+    <!-- <button mat-flat-button color="primary" (click)="print()">Print</button> -->
+    <!-- <button mat-flat-button color="primary" (click)="checkOther()">Check Other</button> -->
+</div>

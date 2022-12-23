@@ -1,0 +1,173 @@
+@import url(//db.onlinewebfonts.com/c/e662339992c4abf5b43f537391bd3169?family=Candara);
+
+.main {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    font-family: Poppins;
+}
+
+.right {
+    width: 65%;
+    background-color: #ffca0c;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+.header {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+}
+
+.input-field {
+    width: 180%;
+    border: 0px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+.input-field :focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.header {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logos-app {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-between;
+}
+
+button {
+    border: 1px solid #000;
+}
+
+.learning-text {
+    font-family: Candara;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.right-header {
+    font-family: Candara;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.hilm-text {
+    font-size: 50px;
+}
+
+.left-footer {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+}
+
+
+.left-image {
+    margin-top: 200px;
+}
+
+
+
+/*  Mobile Code */
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: red;
+    }
+
+    .main {
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .right {
+        width: 100%;
+        height: 100vh;
+        padding: 0px 0px;
+    }
+
+    .left {
+        width: 100%;
+        height: max-content;
+    }
+
+    .header img {
+        width: 80px;
+    }
+
+    .left img {
+        width: 200px;
+        padding: 30px 0px 0px 0px;
+    }
+
+    .left-image {
+        margin-top: 100px;
+    }
+
+    .logos-app img {
+        padding: 0px;
+        width: 110px;
+        margin: 0px 0px 40px 0px;
+    }
+
+    .logos-app {
+        width: 70%;
+        justify-content: space-between;
+    }
+
+    .right-header {
+        margin-top: 0px;
+    }
+
+    .learning-text {
+        margin-top: 40px;
+    }
+
+    .hilm-text {
+        font-size: 40px;
+    }
+
+    .hauna {
+        width: 150px !important;
+        margin: 0 !important;
+    }
+
+    .hauna-div {
+        justify-content: center !important;
+        margin-bottom: 30px !important;
+    }
+}

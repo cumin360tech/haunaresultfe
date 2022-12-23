@@ -1,0 +1,47 @@
+<div class="main">
+    <div class="header">
+        <img src="../../assets/growon.png" width="100">
+        <div style="display: flex;justify-content: flex-end;width: 55%;align-items: center;">
+            <img src="../../assets/mferd.png" width="100">
+        </div>
+    </div>
+    <div class="left">
+        <img src="../../assets/image.png" width="350" class="left-image">
+        <br>
+        <div class="logos-app">
+            <a href="https://play.google.com/store/apps/details?id=com.thinkdigital.growonplus_teacher"
+                target="_blank"><img class="playstore" src="../../assets/playstore.png" width="160"></a>
+            <a href="https://teacher.growon.app/" target="_blank"><img src="../../assets/appstore.png" width="130"
+                    class="apple"></a>
+        </div>
+        <div class="hauna-div" style="display: flex;width: 100%;justify-content: start;">
+            <img class="hauna" src="../../assets/hauna.png" width="130" style="margin: 50px 35px">
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="right-header">
+            <h1 class="hilm-text">HAUNA TEACHERS TRAINING COURSE<br></h1>
+            <!-- <br> -->
+            <h1>Training Results
+                <!-- <br> -->
+            </h1>
+
+        </div>
+        <form [formGroup]="form" class="form">
+            <!-- <label style="color:#000"><b>Enter your Register Number</b></label> -->
+            <input matInput placeholder="Enter Register Number" formControlName="registernumber" class="input-field">
+            <!-- <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Register Number</mat-label>
+            </mat-form-field> -->
+            <!-- <span>All the Best</span> -->
+            <button mat-flat-button (click)="navigateResult()">Check Your Result 👍</button>
+            <br>
+            <span style="font-family:Poppins">All the Best</span>
+        </form>
+        <div class="learning-text">
+            <h2>growOn Making learning<br>
+                Fun . Meaningful . Measurable</h2>
+        </div>
+    </div>
+</div>

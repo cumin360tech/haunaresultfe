@@ -1,0 +1,12 @@
+<div class="main">
+    <div id="print">
+        <span class="name">
+            {{name}}
+        </span>
+        <img src="../../assets/certificate.jpg" alt="" height="550">
+    </div>
+</div>
+<div class="print-btn">
+    <button mat-flat-button color="primary" printSectionId="print" ngxPrint [useExistingCss]="true"
+        [printStyle]="{span : {'top': '12.5% !important' }}">Print</button>
+</div>

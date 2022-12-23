@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+.main {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.print {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+.name {
+    position: absolute;
+    top: 26%;
+    left: 55%;
+    font-size: 23px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.print-btn {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

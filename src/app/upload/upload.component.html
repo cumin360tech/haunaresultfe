@@ -1,0 +1,9 @@
+<div class="main" *ngIf="authenticated">
+    <input type="file" (change)="upload($event)" *ngIf="!uploaded">
+    <h1 *ngIf="uploaded">Uploaded Successfully</h1>
+</div>
+<div class="login" *ngIf="!authenticated">
+    <input type="password" [(ngModel)]="typedpassword">
+    <br>
+    <button (click)="check()">Authenticate</button>
+</div>
