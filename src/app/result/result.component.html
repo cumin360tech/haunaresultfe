@@ -39,7 +39,7 @@
                 <th>
                     Year:
                 </th>
-                <td><b>2022-23</b></td>
+                <td><b>2023-24</b></td>
             </tr>
         </table>
         <br />
@@ -83,14 +83,26 @@
                 <td>15</td>
                 <td>{{data?.Demonstrating_knowledge_of_student_assessments}}</td>
             </tr>
-            <tr *ngIf="data?.Group_Presentation">
+            <tr *ngIf="data?.Demonstrating_Understanding_of_Principles_of_Hauna_Pedagogy">
                 <td>6 </td>
+                <td>Demonstrating Understanding of Principles of Hauna Pedagogy.</td>
+                <td>15</td>
+                <td>{{data?.Demonstrating_Understanding_of_Principles_of_Hauna_Pedagogy}}</td>
+            </tr>
+            <tr *ngIf="data?.Pedagogy_Demonstration_Class">
+                <td>7 </td>
+                <td>Pedagogy Demonstration Class</td>
+                <td>29</td>
+                <td>{{data?.Pedagogy_Demonstration_Class}}</td>
+            </tr>
+            <tr *ngIf="data?.Group_Presentation">
+                <td>8 </td>
                 <td>Group Presentation</td>
                 <td>20</td>
                 <td>{{data?.Group_Presentation}}</td>
             </tr>
             <tr *ngIf="data?.Attendance">
-                <td>7 </td>
+                <td>9 </td>
                 <td>Attendance</td>
                 <td>10</td>
                 <td>{{data?.Attendance}}</td>
@@ -100,7 +112,7 @@
         <br />
         <table id="result">
             <tr>
-                <th>Total Marks Secured</th>
+                <th>Total Marks Secured - Max Marks 150</th>
                 <td><b>{{data?.Total}}</b></td>
             </tr>
             <tr>

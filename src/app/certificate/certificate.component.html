@@ -1,12 +1,24 @@
-<div class="main">
-    <div id="print">
-        <span class="name">
+<div class="main" style=" margin-top: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;">
+    <div id="print" id="content" #content style=" display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;">
+        <span class="name" style="position: absolute;
+        width: 100%;
+        top: 26%;
+        left: 55%;
+        font-size: 23px;
+        font-family: 'Dancing Script', cursive" #pname>
             {{name}}
         </span>
         <img src="../../assets/certificate.jpg" alt="" height="550">
     </div>
 </div>
 <div class="print-btn">
-    <button mat-flat-button color="primary" printSectionId="print" ngxPrint [useExistingCss]="true"
-        [printStyle]="{span : {'top': '12.5% !important' }}">Print</button>
+    <button (click)="SavePDF(name)" mat-flat-button color="primary">Print</button>
 </div>
