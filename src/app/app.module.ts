@@ -10,12 +10,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgxPrintModule } from 'ngx-print';
 
 import { MatInputModule } from '@angular/material/input'
+import { MatTabsModule } from '@angular/material/tabs'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatButtonModule } from '@angular/material/button';
 import { ResultComponent } from './result/result.component';
 import { LoginComponent } from './login/login.component';
 import { UploadComponent } from './upload/upload.component';
-import { CertificateComponent } from './certificate/certificate.component'
+import { CertificateComponent } from './certificate/certificate.component';
+import { Login2Component } from './login2/login2.component';
+import { Result2Component } from './result2/result2.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { CertificateComponent } from './certificate/certificate.component'
     ResultComponent,
     LoginComponent,
     UploadComponent,
-    CertificateComponent
+    CertificateComponent,
+    Login2Component,
+    Result2Component
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,8 @@ import { CertificateComponent } from './certificate/certificate.component'
     // Material
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

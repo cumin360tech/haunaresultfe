@@ -36,4 +36,17 @@ export class UploadComponent implements OnInit {
       this.authenticated = false
     }
   }
+  upload2(event: any) {
+    console.log(event)
+    this.formData.append('file', event.target.files[0])
+    this.apiService.upload2(this.formData).subscribe((res: any) => {
+      if (res.status == 200) {
+        console.log(res)
+        this.uploaded = true
+      } else {
+        this.uploaded = false
+      }
+    })
+  }
+
 }

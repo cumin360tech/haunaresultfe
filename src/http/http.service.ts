@@ -20,7 +20,15 @@ export class HttpService {
     return this.http.get(`${this.API}/result?reg_no=${registerNo}`, { headers: this.reqHeaders, observe: 'response' })
   }
 
+  getResults2(registerNo: any) {
+    return this.http.get(`${this.API}/result2?reg_no=${registerNo}`, { headers: this.reqHeaders, observe: 'response' })
+  }
+
   upload(file: any) {
     return this.http.post(`${this.API}/publishResult`, { headers: this.reqHeaders, observe: 'response' })
+  }
+
+  upload2(file: any) {
+    return this.http.post(`${this.API}/publishResult2`, { headers: this.reqHeaders, observe: 'response' })
   }
 }

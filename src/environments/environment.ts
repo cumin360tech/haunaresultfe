@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   // API_URL: 'http://43.204.91.65:9000'
-  // API_URL: 'http://localhost:9000'
-  API_URL: 'https://huana-backend.growon.app'
+  API_URL: 'http://localhost:9000'
+  // API_URL: 'https://huana-backend.growon.app'
 };
 
 /*
