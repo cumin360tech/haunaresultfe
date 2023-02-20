@@ -21,9 +21,13 @@ export class CertificateComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, public renderer: Renderer2) { }
 
+  type: string = 'old'
+
   ngOnInit(): void {
+
     this.route.paramMap.subscribe((params: any) => {
       this.name = params.get('name')
+      this.type = params.get('type')
     })
   }
 

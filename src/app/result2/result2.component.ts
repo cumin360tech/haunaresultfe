@@ -86,6 +86,6 @@ export class Result2Component implements OnInit {
   }
 
   certificate(name: string) {
-    this.router.navigate(['certificate', { name: name }])
+    this.router.navigate(['certificate', { name: name, type: 'new' }])
   }
 }

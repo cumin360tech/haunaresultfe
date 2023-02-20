@@ -34,7 +34,7 @@ export class Login2Component implements OnInit {
       if (data.Name) {
         this.router.navigate([`result2/${this.form.value.registernumber}`])
       } else {
-        alert('No Records Found')
+        alert(res.body.message)
       }
     })
   }

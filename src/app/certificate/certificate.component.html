@@ -16,7 +16,8 @@ position: relative;">
         font-family: 'Dancing Script', cursive" #pname>
             {{name}}
         </span>
-        <img src="../../assets/certificate.jpg" alt="" height="550">
+        <img *ngIf="type === 'old'" src="../../assets/certificate2.png" alt="" height="550">
+        <img *ngIf="type === 'new'" src="../../assets/certificate.jpg" alt="" height="550">
     </div>
 </div>
 <div class="print-btn">
