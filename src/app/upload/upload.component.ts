@@ -9,6 +9,7 @@ import { HttpService } from 'src/http/http.service';
 export class UploadComponent implements OnInit {
   formData: FormData = new FormData();
   uploaded: Boolean = false;
+  response: any;
   password = '@growon.result'
   typedpassword = ''
   authenticated: Boolean = false;
@@ -17,18 +18,6 @@ export class UploadComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  upload(event: any) {
-    console.log(event)
-    this.formData.append('file', event.target.files[0])
-    this.apiService.upload(this.formData).subscribe((res: any) => {
-      if (res.status == 200) {
-        console.log(res)
-        this.uploaded = true
-      } else {
-        this.uploaded = false
-      }
-    })
-  }
   check() {
     if (this.typedpassword === this.password) {
       this.authenticated = true
@@ -36,17 +25,59 @@ export class UploadComponent implements OnInit {
       this.authenticated = false
     }
   }
-  upload2(event: any) {
-    console.log(event)
+
+
+  addFile(event: any) {
     this.formData.append('file', event.target.files[0])
-    this.apiService.upload2(this.formData).subscribe((res: any) => {
+  }
+
+  upload() {
+    this.apiService.upload(this.formData).subscribe((res: any) => {
       if (res.status == 200) {
-        console.log(res)
         this.uploaded = true
+        this.response = res.resultWeGot.insertedCount
+        this.formData = new FormData()
       } else {
         this.uploaded = false
       }
     })
   }
 
+  append() {
+    this.apiService.append(this.formData).subscribe((res: any) => {
+      if (res.status == 200) {
+        console.log(res)
+        this.uploaded = true
+        this.response = res.resultWeGot.insertedCount
+        this.formData = new FormData()
+      } else {
+        this.uploaded = false
+      }
+    })
+  }
+
+  upload2() {
+    this.apiService.upload2(this.formData).subscribe((res: any) => {
+      if (res.status == 200) {
+        console.log(res)
+        this.uploaded = true
+        this.response = res.resultWeGot.insertedCount
+        this.formData = new FormData()
+      } else {
+        this.uploaded = false
+      }
+    })
+  }
+
+  append2() {
+    this.apiService.append2(this.formData).subscribe((res: any) => {
+      if (res.status == 200) {
+        this.uploaded = true
+        this.response = res.resultWeGot.insertedCount
+        this.formData = new FormData()
+      } else {
+        this.uploaded = false
+      }
+    })
+  }
 }
